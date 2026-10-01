@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dev Audio - Headphones</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#050505,#171717,#000);
+  color:white;
+}
+
+header{
+  padding:25px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#090909;
+  position:sticky;
+  top:0;
+  z-index:10;
+  box-shadow:0 3px 20px #000;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:bold;
+  color:#00e5ff;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+}
+
+.hero{
+  text-align:center;
+  padding:65px 20px;
+}
+
+.hero h1{
+  font-size:45px;
+  margin-bottom:15px;
+}
+
+.hero span{
+  color:#00e5ff;
+}
+
+.hero p{
+  color:#bbb;
+  font-size:18px;
+}
+
+.search{
+  width:90%;
+  max-width:500px;
+  margin:25px auto;
+}
+
+.search input{
+  width:100%;
+  padding:15px;
+  border-radius:30px;
+  border:1px solid #333;
+  background:#111;
+  color:white;
+  outline:none;
+  font-size:16px;
+}
+
+.products{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  padding-bottom:50px;
+}
+
+.card{
+  background:rgba(255,255,255,0.06);
+  border:1px solid #292929;
+  border-radius:22px;
+  padding:18px;
+  text-align:center;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 35px rgba(0,229,255,.15);
+}
+
+.card img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  border-radius:15px;
+  background:#111;
+}
+
+.card h2{
+  margin:15px 0 8px;
+}
+
+.card p{
+  color:#aaa;
+  margin-bottom:15px;
+}
+
+button{
+  border:none;
+  padding:12px 25px;
+  border-radius:25px;
+  background:#00e5ff;
+  color:#001014;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+button:hover{
+  background:white;
+}
+
+footer{
+  text-align:center;
+  padding:25px;
+  background:#080808;
+  color:#888;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🎧 DEV AUDIO</div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#products">Headphones</a>
+  </nav>
+</header>
+
+
+<section class="hero">
+
+  <h1>Premium <span>Headphones</span></h1>
+
+  <p>Feel the music. Hear every detail.</p>
+
+  <div class="search">
+    <input
+      type="text"
+      id="search"
+      placeholder="🔍 Search headphones..."
+      onkeyup="searchProducts()">
+  </div>
+
+</section>
+
+
+<section class="products" id="products">
+
+
+<!-- 1 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80">
+<h2>Wireless Pro</h2>
+<p>Premium Wireless Headphones</p>
+<button onclick="showMsg()">Buy Now</button>
+</div>
+
+
+<!-- 2 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=800&q=80">
+<h2>Studio Max</h2>
+<p>Powerful Studio Sound</p>
+<button onclick="showMsg()">Buy Now</button>
+</div>
+
+
+<!-- 3 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80">
+<h2>Sound X</h2>
+<p>Deep Bass & Clear Audio</p>
+<button onclick="showMsg()">Buy Now</button>
+</div>
+
+
+<!-- 4 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1577174881658-0f30ed549adc?auto=format&fit=crop&w=800&q=80">
+<h2>Elite Headset</h2>
+<p>Modern Premium Design</p>
+<button onclick="showMsg()">Buy Now</button>
+</div>
+
+
+<!-- 5 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=800&q=80">
+<h2>Air Sound</h2>
+<p>Lightweight Wireless Audio</p>
+<button onclick="showMsg()">Buy Now</button>
+</div>
+
+
+<!-- 6 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=800&q=80">
+<h2>Music Pro</h2>
+<p>Immersive Music Experience</p>
+<button onclick="showMsg()">Buy Now</button>
+</div>
+
+
+<!-- 7 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?auto=format&fit=crop&w=800&q=80">
+<h2>Black Beat</h2>
+<p>Powerful Bass Headphones</p>
+<button onclick="showMsg()">Buy Now</button>
+</div>
+
+
+<!-- 8 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1558756520-22cfe5d382ca?auto=format&fit=crop&w=800&q=80">
+<h2>Pro Bass</h2>
+<p>Deep Bass Experience</p>
+<button onclick="showMsg()">Buy Now</button>
+</div>
+
+
+<!-- 9 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?auto=format&fit=crop&w=800&q=80">
+<h2>Sound Master</h2>
+<p>Clear Premium Sound</p>
+<button onclick="showMsg()">Buy Now</button>
+</div>
+
+
+<!-- 10 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80">
+<h2>Smart Audio</h2>
+<p>Modern Wireless Design</p>
+<button onclick="showMsg()">Buy Now</button>
+</div>
+
+
+<!-- 11 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=800&q=80">
+<h2>Gaming Headset</h2>
+<p>Immersive Gaming Audio</p>
+<button onclick="showMsg()">Buy Now</button>
+</div>
+
+
+<!-- 12 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1599669454699-248893623440?auto=format&fit=crop&w=800&q=80">
+<h2>DJ Pro</h2>
+<p>Professional Audio</p>
+<button onclick="showMsg()">Buy Now</button>
+</div>
+
+
+<!-- 13 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1585298723682-7115561c51b7?auto=format&fit=crop&w=800&q=80">
+<h2>Classic Sound</h2>
+<p>Classic Premium Headphones</p>
+<button onclick="showMsg()">Buy Now</button>
+</div>
+
+
+<!-- 14 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1545127398-14699f92334b?auto=format&fit=crop&w=800&q=80">
+<h2>Ultra Bass</h2>
+<p>High Quality Audio</p>
+<button onclick="showMsg()">Buy Now</button>
+</div>
+
+
+<!-- 15 -->
+<div class="card">
+<img src="https://images.unsplash.com/photo-1622445275576-721325763afe?auto=format&fit=crop&w=800&q=80">
+<h2>Dev Edition</h2>
+<p>Premium Music Experience</p>
+<button onclick="showMsg()">Buy Now</button>
+</div>
+
+
+</section>
+
+
+<footer>
+© 2026 Dev Audio | Premium Headphones 🎧
+</footer>
+
+
+<script>
+
+function showMsg(){
+
+alert("Thanks! Your headphone selection is ready.");
+
+}
+
+
+function searchProducts(){
+
+let input =
+document.getElementById("search").value.toLowerCase();
+
+let cards =
+document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+let name =
+card.innerText.toLowerCase();
+
+if(name.includes(input)){
+
+card.style.display="block";
+
+}else{
+
+card.style.display="none";
+
+}
+
+});
+
+}
+
+</script>
+
+</body>
+  </html>
